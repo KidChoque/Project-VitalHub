@@ -5,6 +5,8 @@ export const GoogleButton = styled(Button)`
   background-color: #fafafa;
   border: 1px solid #496bba;
   margin: 5%;
+  flex-direction: row;
+  gap: 12px;
 `;
 
 export const GoogleButtonTitle = styled.Text`

@@ -8,7 +8,12 @@ width: 90%;
 height: 44px;
 border-radius: 5px;
 background-color: #496BBA;
+/* margin: 5%; */
 `
+export const Continue = styled(Button)`
+margin: 5%;
+`
+
 
 export const ButtonTitle = styled.Text`
 

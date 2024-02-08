@@ -5,3 +5,7 @@ export const Container = styled.SafeAreaView`
   align-items: center;
   background-color: "#fafafa";
 `;
+
+// export const CtForgotPassword = styled(Container)`
+// gap: 20px;
+// `
