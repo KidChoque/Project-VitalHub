@@ -32,7 +32,7 @@ export const Login = ({navigation}) => {
           </GoogleButton>
   
           <ContentAccount>
-            <TextAccount>Não tem Conta ?<LinkAccount onPress="CreateAccount">Crie uma conta agora!</LinkAccount> </TextAccount>
+            <TextAccount>Não tem Conta ?<LinkAccount onPress={() => navigation.navigate("CreateAccount")}>Crie uma conta agora!</LinkAccount> </TextAccount>
           </ContentAccount> 
       </Container>
     );

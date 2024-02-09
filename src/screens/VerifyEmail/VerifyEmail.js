@@ -6,7 +6,8 @@ import { Subtitle, SubtitleBox } from "../../components/Subtitle/Subtitle";
 import { Title } from "../../components/Title/Title";
 
 import LogoImage from '../../../assets/Logo.png'
-import { CodeInput, CodeInputBox } from "../../components/CodeInputBox/CodeInputBox";
+import { CodeInputBox } from "../../components/CodeInputBox/CodeInputBox";
+import { VerificationCode } from "../../components/CodeInputBox/CodeIndex";
 
 
 
@@ -24,10 +25,8 @@ export const VerifyEmail = () => {
       </SubtitleBox>
 
       <CodeInputBox>
-        <CodeInput placeholder="0"/>
-        <CodeInput />
-        <CodeInput />
-        <CodeInput />
+        <VerificationCode placeholder="0"/>
+  
       </CodeInputBox>
 
       <Button>

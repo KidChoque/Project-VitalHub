@@ -62,9 +62,9 @@ export default function App() {
        
        />
       <Stack.Screen
-        name='ResetPassword'
+        name='ResetPassaword'
         component={ResetPassaword}
-        options={{title: "ResetPassword"}}
+        options={{title: "ResetPassaword"}}
        
        />
       <Stack.Screen

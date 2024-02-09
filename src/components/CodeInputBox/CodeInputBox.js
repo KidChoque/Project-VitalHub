@@ -1,24 +1,32 @@
+import { StyleSheet } from "react-native";
 import styled from "styled-components";
 
 export const CodeInputBox = styled.View`
+  width: 80%;
+  justify-content: center;
+  flex-direction: row;
+  margin: 5%;
 
-width: 80%;
-justify-content: space-evenly;
-flex-direction: row;
-margin-bottom: 5%;
+`;
+export const CodeInput = StyleSheet.create({
+    // root: {flex: 1, padding: 20},
+    // title: {textAlign: 'center', fontSize: 30},
+    codeFieldRoot: {gap:20},
+    cell: {
+      width: 65,
+      height: 62,
+      lineHeight: 38,
+      fontSize: 40,
+      borderWidth: 2,
+      borderRadius: 5,
+      borderColor: "#49B3BA",
+      lineHeight:56.5,
+      textAlign:"center",
+      color: "#34898F",
+    },
+    focusCell: {
+      borderColor: '#000',
+    },
+  });
+  
 
-`
-
-export const CodeInput = styled.TextInput.attrs({
-    placeholderTextColor: `#34898F`
-})`
-width: 20%;
-height: 62px;
-padding: 16px;
-margin-top: 5%;
-border: 2px solid #49B3BA;
-border-radius:5px;
-color: #34898F;
-font-size:16px;
-font-family:'MontserratAlternates_600SemiBold'
-`
