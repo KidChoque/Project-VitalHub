@@ -2,7 +2,7 @@ import { Button, ButtonTitle } from "../../components/Button/Button";
 import { Container } from "../../components/Container/Container";
 
 import { Logo } from "../../components/Logo/Logo";
-import { Subtitle, SubtitleBox } from "../../components/Subtitle/Subtitle";
+import { EmailText, Subtitle, SubtitleBox } from "../../components/Subtitle/Subtitle";
 import { Title } from "../../components/Title/Title";
 
 import LogoImage from '../../../assets/Logo.png'
@@ -20,7 +20,7 @@ export const VerifyEmail = () => {
 
       <SubtitleBox>
         <Subtitle>
-          Digite o código de 4 dígitos enviado para username@email.com
+          Digite o código de 4 dígitos enviado para <EmailText>username@email.com</EmailText>
         </Subtitle>
       </SubtitleBox>
 

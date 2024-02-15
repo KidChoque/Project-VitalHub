@@ -16,6 +16,8 @@ import { ForgotPassaword } from "./src/screens/ForgotPassword/ForgotPassword";
 import { VerifyEmail } from "./src/screens/VerifyEmail/VerifyEmail";
 import { ResetPassaword } from "./src/screens/ResetPassword/ResetPassword";
 import { CreateAccount } from "./src/screens/CreateAccount/CreateAccount";
+import { Perfil } from "./src/screens/Perfil/Perfil";
+import { Profile } from "./src/screens/Profile/Profile";
 
 export default function App() {
 
@@ -71,6 +73,13 @@ export default function App() {
         name='CreateAccount'
         component={CreateAccount}
         options={{title: "CreateAccount"}}
+       
+       />
+
+      <Stack.Screen
+        name='Profile'
+        component={Profile}
+        options={{title: "Profile"}}
        
        />
 
