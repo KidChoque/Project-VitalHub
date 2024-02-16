@@ -16,7 +16,6 @@ import { ForgotPassaword } from "./src/screens/ForgotPassword/ForgotPassword";
 import { VerifyEmail } from "./src/screens/VerifyEmail/VerifyEmail";
 import { ResetPassaword } from "./src/screens/ResetPassword/ResetPassword";
 import { CreateAccount } from "./src/screens/CreateAccount/CreateAccount";
-import { Perfil } from "./src/screens/Perfil/Perfil";
 import { Profile } from "./src/screens/Profile/Profile";
 
 export default function App() {

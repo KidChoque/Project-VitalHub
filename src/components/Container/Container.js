@@ -6,6 +6,8 @@ export const Container = styled.SafeAreaView`
   background-color: "#fafafa";
 `;
 
-// export const CtForgotPassword = styled(Container)`
-// gap: 20px;
-// `
+export const InfoContainer= styled.SafeAreaView`
+margin-top: 5%;
+align-items: center;
+justify-content: center;
+`
