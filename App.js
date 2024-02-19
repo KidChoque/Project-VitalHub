@@ -17,6 +17,7 @@ import { VerifyEmail } from "./src/screens/VerifyEmail/VerifyEmail";
 import { ResetPassaword } from "./src/screens/ResetPassword/ResetPassword";
 import { CreateAccount } from "./src/screens/CreateAccount/CreateAccount";
 import { Profile } from "./src/screens/Profile/Profile";
+import { MedicalConsultation } from "./src/screens/MedicalConsultation/MedicalConsultation";
 
 export default function App() {
 
@@ -79,6 +80,12 @@ export default function App() {
         name='Profile'
         component={Profile}
         options={{title: "Profile"}}
+       
+       />
+      <Stack.Screen
+        name='MedicalConsultation'
+        component={MedicalConsultation}
+        options={{title: "MedicalConsultation"}}
        
        />
 
