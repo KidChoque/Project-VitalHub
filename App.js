@@ -7,7 +7,7 @@ import { Navigation } from "./src/screens/Navigation/Navigation";
 
 const Stack = createNativeStackNavigator();
 
-import { useFonts,MontserratAlternates_600SemiBold,MontserratAlternates_500Medium,MontserratAlternates_700Bold } from '@expo-google-fonts/montserrat-alternates';
+import { useFonts,MontserratAlternates_600SemiBold,MontserratAlternates_500Medium,MontserratAlternates_700Bold,Quicksand_400Regular,Quicksand_600Semibold  } from '@expo-google-fonts/montserrat-alternates';
 
 import {Quicksand_500Medium } from '@expo-google-fonts/quicksand';
 
@@ -25,7 +25,10 @@ export default function App() {
     MontserratAlternates_600SemiBold,
     MontserratAlternates_500Medium,
     MontserratAlternates_700Bold,
-    Quicksand_500Medium
+    Quicksand_500Medium,
+    Quicksand_400Regular,
+    Quicksand_600Semibold
+    
    })
   
    if (!fonstLoaded && !fontsError) {
