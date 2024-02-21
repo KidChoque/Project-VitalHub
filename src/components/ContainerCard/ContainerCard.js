@@ -4,6 +4,8 @@ import { Title } from "../Title/Title";
 
 export const ContainerCardList = styled.View`
 width: 90%;
+justify-content: center;
+align-items: center;
 flex-direction: row;
 color: yellow;
 margin-bottom: 12px;
