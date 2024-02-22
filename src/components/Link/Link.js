@@ -9,6 +9,7 @@ export const LinkMedium = styled.Text`
  /* border-bottom: #7A7786; */
 
 `
+
 export const LinkAccount = styled(LinkMedium)`
 color: #4D659D;
 `

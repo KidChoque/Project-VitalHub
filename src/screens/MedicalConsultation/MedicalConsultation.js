@@ -8,6 +8,7 @@ import { Container } from "../../components/Container/Container";
 import { FilterAppointment } from "../../components/FilterAppointment/FilterAppointment";
 import Header from "../../components/Header/HeaderIndex";
 import { ListComponent } from "../../components/List/List";
+import { CancelationModal } from "../../components/Modal/ModalIndex";
 
 const Consultas = [
   { id: 1, nome: "Lucas", situacao: "pendente" },
@@ -21,10 +22,12 @@ export const MedicalConsultation = () => {
 
   const [statusList, setStatusList] = useState("pendente");
 
-  const [modalVisible,setModalVisible] = useState("false")
+  const [showModalCancel,setModalVisible] = useState("false")
+  const [showModalAppointment,setModalVision] = useState("false")
 
   return (
     <Container>
+      
       <Header />
 
       <Calendar />
@@ -52,10 +55,16 @@ export const MedicalConsultation = () => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) =>
           statusList == item.situacao && (
-            <AppointmentCard situacao={item.situacao} />
+            <AppointmentCard situacao={item.situacao} onPressCancel={() => setModalVisible(true)}
+            
+            
+            />
           )
         }
       />
+
+      <CancelationModal visible={showModalCancel} setShowModal={setModalVisible}/>
+
     </Container>
   );
 };

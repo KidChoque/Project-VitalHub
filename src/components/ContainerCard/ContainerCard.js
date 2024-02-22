@@ -7,7 +7,6 @@ width: 90%;
 justify-content: center;
 align-items: center;
 flex-direction: row;
-color: yellow;
 margin-bottom: 12px;
 padding: 10px 10px;
 gap: 10px;
@@ -26,7 +25,7 @@ border-radius: 5px;
 export const ContentCard = styled.View`
 width: 70%;
 
-background-color: red;
+
 `
 
 export const DataProfileCard = styled.View`
@@ -64,9 +63,10 @@ export const ClockCard = styled.View`
 flex-direction: row;
 padding: 4px 23px;
 gap: 6px;
+background-color: #E8FCFD;
 
 `
-export const ButtonCard = styled.View`
+export const ButtonCard = styled.TouchableOpacity`
 
 `
 export const ButtonText = styled.Text`
