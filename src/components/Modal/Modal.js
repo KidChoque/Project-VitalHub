@@ -23,3 +23,10 @@ border-radius: 10px;
 background-color: #fff;
 align-items: center;
 `
+
+export const ModalImage = styled.Image`
+width: 80%;
+height: 181;
+border-radius: 10px;
+
+`

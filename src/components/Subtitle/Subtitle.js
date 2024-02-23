@@ -11,6 +11,7 @@ text-align: center;
 font-size: 16px;
 font-family: "Quicksand_500Medium";
 color: #5F5C6B;
+flex-direction: row;
 
 `
 

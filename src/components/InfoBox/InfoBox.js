@@ -5,8 +5,7 @@ export const InfoView = styled.View`
  flex-direction: row;
  align-items: center;
  justify-content: center;
-
-`
+ `
 export const MiniBox = styled.SafeAreaView`
 flex-direction: column;
 `
