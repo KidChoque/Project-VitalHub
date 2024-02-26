@@ -7,7 +7,7 @@ import {
   ModalCancelButton,
 } from "../Button/Button";
 
-import { Modal, ModalContent, ModalImage, PatientModal } from "./Modal";
+import { Modal, ModalContent, ModalImage, PatientModal, ScheduleModal } from "./Modal";
 
 import PatientImage from '../../../assets/User.png'
 import InfoBox from "../InfoBox/InfoIndex";
@@ -68,8 +68,10 @@ export const SchedulingModal = ({visible,setShowModal,...rest}) =>{
 
 return(
 
-  <Modal {...rest} visible={visible} transparent={true}
+  <ScheduleModal {...rest} visible={visible} transparent={true}
   
-  ></Modal>
+  ></ScheduleModal>
 )
 }
+
+

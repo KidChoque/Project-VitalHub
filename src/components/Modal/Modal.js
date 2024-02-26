@@ -7,6 +7,10 @@ border-radius: 10px;
 background-color: "#FFFFFF";
 align-items: center;
 `
+export const ScheduleModal = styled(Modal)`
+height: 518px;
+justify-content: flex-end
+`
 
 export const PatientModal = styled.View`
 flex: 1;

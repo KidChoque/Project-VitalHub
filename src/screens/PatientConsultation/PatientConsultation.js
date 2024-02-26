@@ -12,9 +12,10 @@ import { AppointmentModal, CancelationModal } from "../../components/Modal/Modal
 import { BottomMenu } from "../../components/BottomMenu/BottoMenuIndex";
 
 import DrImage from "../../../assets/Doctor.png"
+import { IconButton, ScheduleButtonView } from "../../components/Button/Button";
 
-import { FontAwesome5 } from '@expo/vector-icons';
-import { IconButton } from "../../components/Button/Button";
+import { FontAwesome6 } from '@expo/vector-icons';
+
 
 const Consultas = [
   { id: 1, nome: "Lucas", situacao: "pendente" },
@@ -72,7 +73,14 @@ export const PatientConsultation = () => {
         }
       />
 
-      {/* <IconButton><FontAwesome5 name="stethoscope" size={24} color="black" /></IconButton> */}
+      <ScheduleButtonView>
+
+        <IconButton>
+          <FontAwesome6 name="stethoscope" size={24} color="white" />
+        </IconButton>
+
+      </ScheduleButtonView>
+
 
       <CancelationModal visible={showModalCancel} setShowModal={setModalVisible}/>
 

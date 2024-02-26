@@ -10,12 +10,32 @@ export const Button = styled.TouchableOpacity`
   /* margin: 5%; */
 `;
 
-// export const IconButton = styled.TouchableOpacity`
-// justify-content: flex-end;
-// align-items: flex-end;
-// width: 60px;
-// height: 60px;
-// `
+export const IconButton = styled.TouchableOpacity`
+`
+
+
+
+
+export const ScheduleButtonView = styled.View`
+
+position: fixed;
+
+margin-bottom:10%;
+left: 37%;
+
+background-color: #49B3BA;
+
+
+
+justify-content: center;
+align-items: center;
+
+border-radius: 8px;
+width: 60px;
+height: 60px;
+
+`
+
 
 export const Continue = styled(Button)`
   margin: 5%;
