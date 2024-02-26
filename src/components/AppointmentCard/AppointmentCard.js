@@ -1,5 +1,4 @@
 import { AntDesign } from "@expo/vector-icons";
-import Profile from "../../../assets/Perfil.png";
 
 import {
   ButtonCard,
@@ -20,18 +19,19 @@ export const AppointmentCard = ({
   situacao = "pendente",
   onPressCancel,
   onPressAppointment,
+  img,age,name,appointmentType, appointmentHour
 }) => {
   return (
     <ContainerCardList>
-      <ProfileImage source={Profile} />
+      <ProfileImage source={img} />
 
       <ContentCard>
         <DataProfileCard>
-          <ProfileName>João</ProfileName>
+          <ProfileName>{name}</ProfileName>
 
           <ProfileData>
-            <TextAge>45</TextAge>
-            <TextBold>Rotina</TextBold>
+            <TextAge>{age}</TextAge>
+            <TextBold>{appointmentType}</TextBold>
           </ProfileData>
         </DataProfileCard>
 
@@ -43,7 +43,7 @@ export const AppointmentCard = ({
               color={situacao == "pendente" ? "#49B3BA" : "#8C8A97"}
             />
             <TextBold situacao={situacao} color={"#49B3BA"}>
-              14:00
+              {appointmentHour}
             </TextBold>
           </ClockCard>
           

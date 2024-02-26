@@ -9,6 +9,14 @@ export const Button = styled.TouchableOpacity`
   background-color: #496bba;
   /* margin: 5%; */
 `;
+
+// export const IconButton = styled.TouchableOpacity`
+// justify-content: flex-end;
+// align-items: flex-end;
+// width: 60px;
+// height: 60px;
+// `
+
 export const Continue = styled(Button)`
   margin: 5%;
 `;
@@ -36,3 +44,4 @@ export const ModalButtonTitle = styled(ButtonTitle)`
 export const ModalButton = styled(Button)`
   width: 80%;
 `;
+

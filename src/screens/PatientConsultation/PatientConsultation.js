@@ -11,7 +11,10 @@ import { ListComponent } from "../../components/List/List";
 import { AppointmentModal, CancelationModal } from "../../components/Modal/ModalIndex";
 import { BottomMenu } from "../../components/BottomMenu/BottoMenuIndex";
 
+import DrImage from "../../../assets/Doctor.png"
 
+import { FontAwesome5 } from '@expo/vector-icons';
+import { IconButton } from "../../components/Button/Button";
 
 const Consultas = [
   { id: 1, nome: "Lucas", situacao: "pendente" },
@@ -21,7 +24,7 @@ const Consultas = [
   { id: 5, nome: "Lucas", situacao: "cancelado" },
 ];
 
-export const MedicalConsultation = () => {
+export const PatientConsultation = () => {
 
   const [statusList, setStatusList] = useState("pendente");
 
@@ -58,13 +61,18 @@ export const MedicalConsultation = () => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) =>
           statusList == item.situacao && (
-            <AppointmentCard name={"João"} age={"45"} appointmentType={"Rotina"} appointmentHour={"14:00"} img={Profile} situacao={item.situacao} onPressCancel={() => setModalVisible(true) }
+            <AppointmentCard  name={"Dr.Ran Chucrutes"} appointmentHour={"15:00"} age={"33 anos"} img={DrImage} situacao={item.situacao} onPressCancel={() => setModalVisible(true) }
              onPressAppointment={() => setModalVision(true)}
             
             />
+            
+
+
           )
         }
       />
+
+      {/* <IconButton><FontAwesome5 name="stethoscope" size={24} color="black" /></IconButton> */}
 
       <CancelationModal visible={showModalCancel} setShowModal={setModalVisible}/>
 

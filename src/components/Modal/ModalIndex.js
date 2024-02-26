@@ -63,3 +63,13 @@ export const AppointmentModal = ({ visible, setShowModal, ...rest}) => {
     </Modal>
   );
 };
+
+export const SchedulingModal = ({visible,setShowModal,...rest}) =>{
+
+return(
+
+  <Modal {...rest} visible={visible} transparent={true}
+  
+  ></Modal>
+)
+}

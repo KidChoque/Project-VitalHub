@@ -7,6 +7,11 @@ import {
   WelcomeText,
 } from "./Header";
 
+import Profile from "../../../assets/Perfil.png";
+
+
+
+
 export default function Header() {
   return (
     <HomeHeader
@@ -15,10 +20,10 @@ export default function Header() {
       end={{ x: 1, y: 0 }}
     >
       <UserContainer>
-        <UserImage source={require("../../../assets/Perfil.png")} />
+        <UserImage source={Profile} />
         <UserInfoContainer>
           <WelcomeText>Bem vindo</WelcomeText>
-          <NameText>Dr. Claudio</NameText>
+          <NameText> Roberto Nunes </NameText>
         </UserInfoContainer>
       </UserContainer>
     </HomeHeader>

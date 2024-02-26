@@ -10,6 +10,7 @@ export const Navigation = ({ navigation }) => {
       <Button title="VerifyEmail" onPress={() => navigation.navigate("VerifyEmail")} />
       <Button title="Profile" onPress={() => navigation.navigate("Profile")} />
       <Button title="MedicalConsultation" onPress={() => navigation.navigate("MedicalConsultation")} />
+      <Button title="PatientConsultation" onPress={() => navigation.navigate("PatientConsultation")} />
     </View>
   );
 };
