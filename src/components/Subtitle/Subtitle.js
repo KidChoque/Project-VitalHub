@@ -18,3 +18,5 @@ flex-direction: row;
 export const EmailBlueText = styled(Subtitle)`
 color: #496BBA;
 `
+
+

@@ -11,6 +11,7 @@ import { ListComponent } from "../../components/List/List";
 import { AppointmentModal, CancelationModal } from "../../components/Modal/ModalIndex";
 import { BottomMenu } from "../../components/BottomMenu/BottoMenuIndex";
 
+import Profile from "../../../assets/Perfil.png";
 
 
 const Consultas = [

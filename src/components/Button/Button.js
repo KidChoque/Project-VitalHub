@@ -47,6 +47,8 @@ export const ModalCancelButton = styled.TouchableOpacity`
   align-self: center;
   align-self: center;
 `;
+
+
 export const ButtonTitle = styled.Text`
   color: #ffffff;
   text-transform: uppercase;
@@ -60,6 +62,10 @@ export const ModalButtonTitle = styled(ButtonTitle)`
   color: #8c8a97;
   text-transform: none;
 `;
+
+export const ModalBlueTitle = styled(ModalButtonTitle)`
+color: #344f8f;
+`
 
 export const ModalButton = styled(Button)`
   width: 80%;

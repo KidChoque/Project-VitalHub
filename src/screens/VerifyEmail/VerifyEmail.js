@@ -2,12 +2,12 @@ import { Button, ButtonTitle } from "../../components/Button/Button";
 import { Container } from "../../components/Container/Container";
 
 import { Logo } from "../../components/Logo/Logo";
-import { EmailText, Subtitle, SubtitleBox } from "../../components/Subtitle/Subtitle";
 import { Title } from "../../components/Title/Title";
 
 import LogoImage from '../../../assets/Logo.png'
 import { CodeInputBox } from "../../components/CodeInputBox/CodeInputBox";
 import { VerificationCode } from "../../components/CodeInputBox/CodeIndex";
+import { EmailBlueText, Subtitle, SubtitleBox } from "../../components/Subtitle/Subtitle";
 
 
 
@@ -20,12 +20,12 @@ export const VerifyEmail = () => {
 
       <SubtitleBox>
         <Subtitle>
-          Digite o código de 4 dígitos enviado para <EmailText>username@email.com</EmailText>
+          Digite o código de 4 dígitos enviado para <EmailBlueText>username@email.com</EmailBlueText>
         </Subtitle>
       </SubtitleBox>
 
       <CodeInputBox>
-        <VerificationCode placeholder="0"/>
+        <VerificationCode />
   
       </CodeInputBox>
 

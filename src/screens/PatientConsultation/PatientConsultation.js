@@ -8,8 +8,7 @@ import { Container } from "../../components/Container/Container";
 import { FilterAppointment } from "../../components/FilterAppointment/FilterAppointment";
 import Header from "../../components/Header/HeaderIndex";
 import { ListComponent } from "../../components/List/List";
-import { AppointmentModal, CancelationModal } from "../../components/Modal/ModalIndex";
-import { BottomMenu } from "../../components/BottomMenu/BottoMenuIndex";
+import { AppointmentModal, CancelationModal, SchedulePatientModal } from "../../components/Modal/ModalIndex";
 
 import DrImage from "../../../assets/Doctor.png"
 import { IconButton, ScheduleButtonView } from "../../components/Button/Button";
@@ -29,8 +28,9 @@ export const PatientConsultation = () => {
 
   const [statusList, setStatusList] = useState("pendente");
 
-  const [showModalCancel,setModalVisible] = useState("false")
-  const [showModalAppointment,setModalVision] = useState("false")
+  const [showModalCancel, setModalVisible] = useState(false);
+  const [showModalAppointment, setModalVision] = useState(false);
+  const [showModalSchedule, setShowModalSchedule] = useState(false);
 
   return (
     <Container>
@@ -73,20 +73,27 @@ export const PatientConsultation = () => {
         }
       />
 
-      <ScheduleButtonView>
+<ScheduleButtonView>
 
-        <IconButton>
+      <IconButton onPress={() => setShowModalSchedule(true)}>
+
+
           <FontAwesome6 name="stethoscope" size={24} color="white" />
-        </IconButton>
+        
 
-      </ScheduleButtonView>
+      </IconButton>
 
+</ScheduleButtonView>
+      
 
       <CancelationModal visible={showModalCancel} setShowModal={setModalVisible}/>
 
       <AppointmentModal visible={showModalAppointment} setShowModal={setModalVision}/>
 
-      <BottomMenu/>
+      <SchedulePatientModal visible={showModalSchedule} setShowModal={setShowModalSchedule}></SchedulePatientModal>  
+
+
+      {/* <BottomMenu/> */}
 
     </Container>
   );
