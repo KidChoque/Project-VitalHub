@@ -10,6 +10,10 @@ export const Button = styled.TouchableOpacity`
   /* margin: 5%; */
 `;
 
+export const ScheduleBtn = styled(Button)`
+margin-top: 30%;
+`
+
 export const IconButton = styled.TouchableOpacity`
 `
 

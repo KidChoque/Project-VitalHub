@@ -19,6 +19,7 @@ import { CreateAccount } from "./src/screens/CreateAccount/CreateAccount";
 import { Profile } from "./src/screens/Profile/Profile";
 import { MedicalConsultation } from "./src/screens/MedicalConsultation/MedicalConsultation";
 import { PatientConsultation } from "./src/screens/PatientConsultation/PatientConsultation";
+import { SelectClinic } from "./src/screens/SelectClinic/SelectClinic";
 
 export default function App() {
 
@@ -96,6 +97,12 @@ export default function App() {
         name='PatientConsultation'
         component={PatientConsultation}
         options={{title: "PatientConsultation"}}
+       
+       />
+      <Stack.Screen
+        name='SelectClinic'
+        component={SelectClinic}
+        options={{title: "SelectClinic"}}
        
        />
 

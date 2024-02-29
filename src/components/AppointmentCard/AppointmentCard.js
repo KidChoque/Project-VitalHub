@@ -64,3 +64,21 @@ export const AppointmentCard = ({
     </ContainerCardList>
   );
 };
+
+export const ClinicCard = ({clinicName,cityState}) => {
+  return(
+    <ContainerCardList>
+
+        <ContentCard>
+          <DataProfileCard>
+             <ProfileName>{clinicName}</ProfileName>
+             <ProfileData>
+              <TextBold>{cityState}</TextBold>
+             </ProfileData>
+          </DataProfileCard>
+        </ContentCard>
+
+    </ContainerCardList>
+
+  );
+};

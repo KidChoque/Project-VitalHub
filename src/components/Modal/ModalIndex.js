@@ -7,6 +7,7 @@ import {
   ModalButton,
   ModalButtonTitle,
   ModalCancelButton,
+  ScheduleBtn,
 } from "../Button/Button";
 
 import {
@@ -30,6 +31,7 @@ import {
   AbsTypeAppointment,
 } from "../AbsListAppointment/AbsListAppointmentIndex";
 import { FilterAppointment } from "../FilterAppointment/FilterAppointment";
+import { Input } from "../Input/Input";
 
 export const CancelationModal = ({ visible, setShowModal, ...rest }) => {
   return (
@@ -94,6 +96,7 @@ export const SchedulePatientModal = ({ visible, setShowModal, ...rest }) => {
         <ModalContent2>
           <Title>Agendar Consulta</Title>
 
+        
           <InputLabel>Qual o nível da consulta</InputLabel>
 
           <FilterAppointment>
@@ -102,9 +105,13 @@ export const SchedulePatientModal = ({ visible, setShowModal, ...rest }) => {
             <AbsTypeAppointment textButton={"Urgência"} />
           </FilterAppointment>
 
-          <Button>
+          <InputLabel>Informe a Localização Desejada</InputLabel>
+          <Input placeholder={"Informe a localização"}></Input>
+
+
+          <ScheduleBtn>
             <ButtonTitle>Continuar</ButtonTitle>
-          </Button>
+          </ScheduleBtn>
           
           <ModalCancelButton onPress={() => setShowModal(false)}>
             <ModalBlueTitle>Cancelar</ModalBlueTitle>

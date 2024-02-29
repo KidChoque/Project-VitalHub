@@ -21,7 +21,7 @@ export const ButtonTabAppointmentStyle = styled.TouchableOpacity`
   ${(props) =>
     props.clickButton
       ? css`
-          background-color: #496bba;
+          background-color: #60bfc5;
         `
       : css`
           background-color: transparent;

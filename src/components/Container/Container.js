@@ -11,3 +11,8 @@ margin-top: 5%;
 align-items: center;
 justify-content: center;
 `
+
+export const ScheduleContainer = styled.View`
+
+justify-content: space-between;
+`
