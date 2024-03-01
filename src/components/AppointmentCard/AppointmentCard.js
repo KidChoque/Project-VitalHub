@@ -1,11 +1,13 @@
 import { AntDesign } from "@expo/vector-icons";
-
+// import { AntDesign } from '@expo/vector-icons';
 import {
   ButtonCard,
   ButtonText,
-  ClockCard,
+  IconCard,
   ContainerCardList,
+  ContainerClinicCard,
   ContentCard,
+  ContentClinicCard,
   DataProfileCard,
   ProfileData,
   ProfileImage,
@@ -13,13 +15,18 @@ import {
   TextAge,
   TextBold,
   ViewRow,
+  YellowText,
 } from "../ContainerCard/ContainerCard";
 
 export const AppointmentCard = ({
   situacao = "pendente",
   onPressCancel,
   onPressAppointment,
-  img,age,name,appointmentType, appointmentHour
+  img,
+  age,
+  name,
+  appointmentType,
+  appointmentHour,
 }) => {
   return (
     <ContainerCardList>
@@ -36,7 +43,7 @@ export const AppointmentCard = ({
         </DataProfileCard>
 
         <ViewRow>
-          <ClockCard>
+          <IconCard>
             <AntDesign
               name="clockcircle"
               size={14}
@@ -45,8 +52,8 @@ export const AppointmentCard = ({
             <TextBold situacao={situacao} color={"#49B3BA"}>
               {appointmentHour}
             </TextBold>
-          </ClockCard>
-          
+          </IconCard>
+
           {situacao == "cancelado" ? (
             <></>
           ) : situacao == "pendente" ? (
@@ -58,27 +65,27 @@ export const AppointmentCard = ({
               <ButtonText situacao={situacao}>Ver Prontuário</ButtonText>
             </ButtonCard>
           )}
-
         </ViewRow>
       </ContentCard>
     </ContainerCardList>
   );
 };
 
-export const ClinicCard = ({clinicName,cityState}) => {
-  return(
+export const DrSelectionCard = ({}) => {
+  return (
     <ContainerCardList>
+      <ProfileImage source={img} />
 
-        <ContentCard>
-          <DataProfileCard>
-             <ProfileName>{clinicName}</ProfileName>
-             <ProfileData>
-              <TextBold>{cityState}</TextBold>
-             </ProfileData>
-          </DataProfileCard>
-        </ContentCard>
+      <ContentCard>
+        <DataProfileCard>
+          <ProfileName>{name}</ProfileName>
 
+          <ProfileData>
+            <TextAge>{age}</TextAge>
+            <TextBold>{appointmentType}</TextBold>
+          </ProfileData>
+        </DataProfileCard>
+      </ContentCard>
     </ContainerCardList>
-
   );
 };

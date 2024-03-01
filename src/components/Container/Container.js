@@ -6,6 +6,13 @@ export const Container = styled.SafeAreaView`
   background-color: "#fafafa";
 `;
 
+export const ContainerClinic = styled.SafeAreaView`
+flex:1;
+align-items:center;
+justify-content: center;
+background-color: white;
+`
+
 export const InfoContainer= styled.SafeAreaView`
 margin-top: 5%;
 align-items: center;

@@ -6,7 +6,7 @@ import { FlatListClinic } from "../../components/FlatilistClinic/FlatlistClinic"
 import { ButtonTitle,Button ,ModalBlueTitle, ModalCancelButton } from "../../components/Button/Button"
 
 
-export const SelectClinic = () => {
+export const SelectDoctor = () => {
 
    const Clinics =[
 
