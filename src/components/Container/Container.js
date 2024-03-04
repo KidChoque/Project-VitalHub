@@ -6,6 +6,7 @@ export const Container = styled.SafeAreaView`
   background-color: "#fafafa";
 `;
 
+
 export const ContainerClinic = styled.SafeAreaView`
 flex:1;
 align-items:center;
