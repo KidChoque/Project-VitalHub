@@ -5,42 +5,34 @@ import { Title } from "../../components/Title/Title"
 import { FlatListClinic } from "../../components/FlatilistClinic/FlatlistClinic"
 import { ButtonTitle,Button ,ModalBlueTitle, ModalCancelButton } from "../../components/Button/Button"
 
+import drImage1 from "../../../assets/Dr1.png"
+import drImage2 from "../../../assets/Dr2.png"
+import drImage3 from "../../../assets/Dr3.png"
+import { DrSelectionCard } from "../../components/AppointmentCard/AppointmentCard"
+
 
 export const SelectDoctor = () => {
 
-   const Clinics =[
+   const Doctors =[
 
     {
-        clinicName: "Clinica Serfis",
-        cityState: "Mauá, SP",
-        review:"4,5",
-        weekdays:"Segu-Sab"
+        doctorName: "Dra. Serfis",
+        drImg: drImage1,
+        medicalSpecialty:"Dermatóloga,Estecista"
     },
     {
-        clinicName: "Clinica Gersin",
-        cityState: "Santo André, SP",
-        review:"4,5",
-        weekdays:"Segu-Sab"
+        doctorName: "Dr. Sanches",
+        drImg: drImage2,
+        medicalSpecialty:"Dermatóloga,Estecista"
     },
     {
-        clinicName: "Clinica Itaquaquisetuba",
-        cityState: "Mauá, SP",
-        review:"4,5",
-        weekdays:"Segu-Sab"
+        doctorName: "Dr. Lucas",
+        drImg: drImage3,
+        medicalSpecialty:"Dermatóloga,Estecista"
     },
-    {
-        clinicName: "Clinica Travis Scott",
-        cityState: "Salvador, BA",
-        review:"4,5",
-        weekdays:"Segu-Dom"
-    },
-    {
-        clinicName: "Clinica do Malvadao",
-        cityState: "Mauá, SP",
-        review:"5,0",
-        weekdays:"Segu-Sab"
-    }
+  
 
+   
 
    ]
 
@@ -48,28 +40,27 @@ export const SelectDoctor = () => {
   const [select, setSelect] = useState('')
 
     return(
+        
         <ContainerClinic>
 
 
-            <Title>Selecionar Clínica</Title>
+            <Title>Selecionar Medico</Title>
+
 
             <FlatListClinic
             
-            data={Clinics}
+            data={Doctors}
             renderItem={({item}) =>
 
-            <ClinicCard 
+            <DrSelectionCard 
             select={select}
-            onPress={() => setSelect(item.clinicName)}
-            review={item.review}
-            cityState={item.cityState}
-            clinicName={item.clinicName}
-            weekDays={item.weekdays}
+            onPress={() => setSelect(item.doctorName)}
+            medicalSpecialty={item.medicalSpecialty}
+            doctorName={item.doctorName}
+            drImg={item.drImg}
             />
                 
            
-        
-        
         
             }
             >

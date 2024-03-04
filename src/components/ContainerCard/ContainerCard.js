@@ -15,6 +15,14 @@ export const ContainerCardList = styled.TouchableOpacity`
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.85);
 `;
 
+export const DrContainerCardList = styled(ContainerCardList)`
+height: 102px;
+`
+
+export const DrCardSelected = styled(DrContainerCardList)`
+border: 2px solid #496BBA;
+`
+
 export const ContainerClinicCard = styled(ContainerCardList)`
   margin-top: 5%;
   width: 85%;

@@ -20,6 +20,7 @@ import { Profile } from "./src/screens/Profile/Profile";
 import { MedicalConsultation } from "./src/screens/MedicalConsultation/MedicalConsultation";
 import { PatientConsultation } from "./src/screens/PatientConsultation/PatientConsultation";
 import { SelectClinic } from "./src/screens/SelectClinic/SelectClinic";
+import { SelectDoctor } from "./src/screens/SelectDoctor/SelectDoctor";
 
 export default function App() {
 
@@ -103,6 +104,13 @@ export default function App() {
         name='SelectClinic'
         component={SelectClinic}
         options={{title: "SelectClinic"}}
+       
+       />
+
+      <Stack.Screen
+        name='SelectDoctor'
+        component={SelectDoctor}
+        options={{title: "SelectDoctor"}}
        
        />
 

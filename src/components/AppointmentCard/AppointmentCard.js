@@ -16,6 +16,9 @@ import {
   TextBold,
   ViewRow,
   YellowText,
+  ClinicSelected,
+  DrContainerCardList,
+  DrCardSelected,
 } from "../ContainerCard/ContainerCard";
 
 export const AppointmentCard = ({
@@ -71,21 +74,45 @@ export const AppointmentCard = ({
   );
 };
 
-export const DrSelectionCard = ({}) => {
-  return (
-    <ContainerCardList>
-      <ProfileImage source={img} />
-
-      <ContentCard>
-        <DataProfileCard>
-          <ProfileName>{name}</ProfileName>
-
-          <ProfileData>
-            <TextAge>{age}</TextAge>
-            <TextBold>{appointmentType}</TextBold>
-          </ProfileData>
-        </DataProfileCard>
-      </ContentCard>
-    </ContainerCardList>
-  );
+export const DrSelectionCard = ({doctorName,medicalSpecialty,drImg,select,onPress}) => {
+  
+  if (select !== doctorName) {
+    return (
+      <DrContainerCardList onPress={onPress}>
+        <ProfileImage source={drImg} />
+  
+        <ContentCard>
+          <DataProfileCard>
+            <ProfileName>{doctorName}</ProfileName>
+  
+            <ProfileData>
+              <TextBold>{medicalSpecialty}</TextBold>
+            </ProfileData>
+          </DataProfileCard>
+        </ContentCard>
+      </DrContainerCardList>
+    );
+  
+  
+    
+  } else {
+    return (
+      <DrCardSelected onPress={onPress}>
+        <ProfileImage source={drImg} />
+  
+        <ContentCard>
+          <DataProfileCard>
+            <ProfileName>{doctorName}</ProfileName>
+  
+            <ProfileData>
+              <TextBold>{medicalSpecialty}</TextBold>
+            </ProfileData>
+          </DataProfileCard>
+        </ContentCard>
+      </DrCardSelected>
+    );
+  
+  
+  }
+ 
 };
