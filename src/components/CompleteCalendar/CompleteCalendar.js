@@ -75,6 +75,6 @@ export default function CompleteCalendar({
 
 const styles = StyleSheet.create({
   calendar: {
-    width: 400,
+    width: 390,
   },
 });

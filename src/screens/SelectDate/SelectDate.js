@@ -1,6 +1,6 @@
 import { useState } from "react";
 import CompleteCalendar from "../../components/CompleteCalendar/CompleteCalendar";
-import { Container } from "../../components/Container/Container";
+import { ButtonContainer, Container } from "../../components/Container/Container";
 import { Title } from "../../components/Title/Title";
 import SelectInput from "../../components/SelectInput/SelectInput";
 import { Button, ButtonTitle, ModalBlueTitle, ModalCancelButton } from "../../components/Button/Button";
@@ -32,6 +32,8 @@ export const SelectDate = () => {
         handleSelectedFn={setSelectTime}
       ></SelectInput>
 
+<ButtonContainer>
+
       <Button>
         <ButtonTitle>Continuar</ButtonTitle>
       </Button>
@@ -39,6 +41,8 @@ export const SelectDate = () => {
       <ModalCancelButton>
         <ModalBlueTitle>Cancelar</ModalBlueTitle>
       </ModalCancelButton>
+
+</ButtonContainer>
       
     </Container>
   );
