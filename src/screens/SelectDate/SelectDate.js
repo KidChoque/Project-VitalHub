@@ -1,11 +1,24 @@
 import { useState } from "react";
 import CompleteCalendar from "../../components/CompleteCalendar/CompleteCalendar";
-import { ButtonContainer, Container } from "../../components/Container/Container";
+import {
+  ButtonContainer,
+  Container,
+} from "../../components/Container/Container";
 import { Title } from "../../components/Title/Title";
 import SelectInput from "../../components/SelectInput/SelectInput";
-import { Button, ButtonTitle, ModalBlueTitle, ModalCancelButton } from "../../components/Button/Button";
+import {
+  Button,
+  ButtonTitle,
+  ModalBlueTitle,
+  ModalCancelButton,
+} from "../../components/Button/Button";
+import { ConfirmDateInfo } from "../../components/Modal/ModalIndex";
 
 export const SelectDate = () => {
+
+  const [showConfirmModal, setConfirmModal] = useState(false);
+
+
   const [selectDate, setSelectDate] = useState();
   const [selectTime, setSelectTime] = useState();
 
@@ -32,18 +45,17 @@ export const SelectDate = () => {
         handleSelectedFn={setSelectTime}
       ></SelectInput>
 
-<ButtonContainer>
+      <ButtonContainer>
+        <Button onPress={() => setConfirmModal(true)}>
+          <ButtonTitle>Confirmar</ButtonTitle>
+        </Button>
 
-      <Button>
-        <ButtonTitle>Continuar</ButtonTitle>
-      </Button>
+        <ModalCancelButton>
+          <ModalBlueTitle>Cancelar</ModalBlueTitle>
+        </ModalCancelButton>
+      </ButtonContainer>
 
-      <ModalCancelButton>
-        <ModalBlueTitle>Cancelar</ModalBlueTitle>
-      </ModalCancelButton>
-
-</ButtonContainer>
-      
+      <ConfirmDateInfo visible={showConfirmModal} setShowModal={setConfirmModal}></ConfirmDateInfo>
     </Container>
   );
 };

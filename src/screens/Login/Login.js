@@ -9,8 +9,14 @@ import { Button, ButtonTitle } from "../../components/Button/Button";
 import { GoogleButton, GoogleButtonTitle } from "../../components/GoogleButton/GoogleButton";
 import { AntDesign } from '@expo/vector-icons';
 import { ContentAccount, TextAccount } from "./Style";
+import { Main } from "../Main/Main";
 
 export const Login = ({navigation}) => {
+
+
+  async function Login(){
+      navigation.navigate(Main)
+  }
     return (
       <Container>
         <Logo source={LogoImage} />
@@ -22,7 +28,7 @@ export const Login = ({navigation}) => {
   
           <LinkMedium onPress={() => navigation.navigate("ForgotPassword")} >Esqueceu sua senha ?</LinkMedium>
    
-          <Button>
+          <Button onPress={Login}>
             <ButtonTitle> Entrar</ButtonTitle>
           </Button>
   

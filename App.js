@@ -7,7 +7,7 @@ import { Navigation } from "./src/screens/Navigation/Navigation";
 
 const Stack = createNativeStackNavigator();
 
-import { useFonts,MontserratAlternates_600SemiBold,MontserratAlternates_500Medium,MontserratAlternates_700Bold,Quicksand_400Regular,Quicksand_600Semibold  } from '@expo-google-fonts/montserrat-alternates';
+import { useFonts,MontserratAlternates_600SemiBold,MontserratAlternates_500Medium,MontserratAlternates_700Bold,Quicksand_400Regular,Quicksand_600Semibold,Quicksand_500Medium  } from '@expo-google-fonts/montserrat-alternates';
 
 import {Quicksand_500Medium } from '@expo-google-fonts/quicksand';
 
@@ -22,6 +22,7 @@ import { PatientConsultation } from "./src/screens/PatientConsultation/PatientCo
 import { SelectClinic } from "./src/screens/SelectClinic/SelectClinic";
 import { SelectDoctor } from "./src/screens/SelectDoctor/SelectDoctor";
 import { SelectDate } from "./src/screens/SelectDate/SelectDate";
+import { Main } from "./src/screens/Main/Main";
 
 export default function App() {
 
@@ -43,18 +44,24 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+
         <Stack.Screen
+         name='Login'
+         component={Login}
+         options={{title: "Login"}}
+        
+        />
+        <Stack.Screen
+            name='Main'
+            component={Main}
+        
+        />
+        {/* <Stack.Screen
           name='navigation'
           component={Navigation}
           options={{ title: 'Navigation' }}
-        />
+        /> */}
 
-       <Stack.Screen
-        name='Login'
-        component={Login}
-        options={{title: "Login"}}
-       
-       />
 
 
       <Stack.Screen

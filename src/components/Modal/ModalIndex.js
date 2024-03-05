@@ -117,8 +117,46 @@ export const SchedulePatientModal = ({ visible, setShowModal, ...rest }) => {
             <ModalBlueTitle>Cancelar</ModalBlueTitle>
           </ModalCancelButton>
 
-        </ModalContent2>
+        </ModalContent2>  
       </PatientModal2>
     </ScheduleModal>
   );
 };
+
+export const ConfirmDateInfo =({ visible, setShowModal, ...rest }) => {
+  return(
+    <Modal {...rest} visible={visible} transparent={true} animationType="slide">
+    <PatientModal>
+      <ModalContent>
+        <Title>Agendar Consulta</Title>
+
+        <InputLabel>Data da consulta</InputLabel>
+          <Input placeholder={"Informe a localização"}></Input>
+
+          <InputLabel>Médico(a) da consulta</InputLabel>
+          <Input placeholder={"Informe a localização"}></Input>
+
+          <InputLabel>Local da consulta</InputLabel>
+          <Input placeholder={"Informe a localização"}></Input>
+
+          <InputLabel>Tipo da consulta</InputLabel>
+          <Input placeholder={"Informe a localização"}></Input>
+        {/* <SubtitleBox>
+          <Subtitle>
+            Ao cancelar essa consulta, abrirá uma possível disponibilidade no
+            seu horário, deseja mesmo cancelar essa consulta?
+          </Subtitle>
+        </SubtitleBox> */}
+
+        <ModalButton>
+          <ButtonTitle>Confirmar</ButtonTitle>
+        </ModalButton>
+
+        <ModalCancelButton onPress={() => setShowModal(false)}>
+          <ModalButtonTitle>Cancelar</ModalButtonTitle>
+        </ModalCancelButton>
+      </ModalContent>
+    </PatientModal>
+  </Modal>
+  )
+}
