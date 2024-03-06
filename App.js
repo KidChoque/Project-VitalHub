@@ -9,12 +9,11 @@ const Stack = createNativeStackNavigator();
 
 import { useFonts,MontserratAlternates_600SemiBold,MontserratAlternates_500Medium,MontserratAlternates_700Bold,Quicksand_400Regular,Quicksand_600Semibold,Quicksand_500Medium  } from '@expo-google-fonts/montserrat-alternates';
 
-import {Quicksand_500Medium } from '@expo-google-fonts/quicksand';
 
 import { Login } from "./src/screens/Login/Login";
 import { ForgotPassaword } from "./src/screens/ForgotPassword/ForgotPassword";
 import { VerifyEmail } from "./src/screens/VerifyEmail/VerifyEmail";
-import { ResetPassaword } from "./src/screens/ResetPassword/ResetPassword";
+import { ResetPassaword, ResetPassword } from "./src/screens/ResetPassword/ResetPassword";
 import { CreateAccount } from "./src/screens/CreateAccount/CreateAccount";
 import { Profile } from "./src/screens/Profile/Profile";
 import { MedicalConsultation } from "./src/screens/MedicalConsultation/MedicalConsultation";
@@ -78,9 +77,9 @@ export default function App() {
        
        />
       <Stack.Screen
-        name='ResetPassaword'
-        component={ResetPassaword}
-        options={{title: "ResetPassaword"}}
+        name='ResetPassword'
+        component={ResetPassword}
+        options={{title: "ResetPassword"}}
        
        />
       <Stack.Screen

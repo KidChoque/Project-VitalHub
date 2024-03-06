@@ -8,7 +8,7 @@ import { Container } from "../../components/Container/Container";
 import { FilterAppointment } from "../../components/FilterAppointment/FilterAppointment";
 import Header from "../../components/Header/HeaderIndex";
 import { ListComponent } from "../../components/List/List";
-import { AppointmentModal, CancelationModal, SchedulePatientModal } from "../../components/Modal/ModalIndex";
+import { AppointmentModal, CancelationModal, DoctorModal, SchedulePatientModal } from "../../components/Modal/ModalIndex";
 
 import DrImage from "../../../assets/Doctor.png"
 import { IconButton, ScheduleButtonView } from "../../components/Button/Button";
@@ -24,13 +24,14 @@ const Consultas = [
   { id: 5, nome: "Lucas", situacao: "cancelado" },
 ];
 
-export const PatientConsultation = () => {
+export const PatientConsultation = ({navigation}) => {
 
   const [statusList, setStatusList] = useState("pendente");
 
   const [showModalCancel, setModalVisible] = useState(false);
   const [showModalAppointment, setModalVision] = useState(false);
   const [showModalSchedule, setShowModalSchedule] = useState(false);
+  const [showModalDoctor, setShowModalDoctor] = useState(false);
 
   return (
     <Container>
@@ -62,8 +63,10 @@ export const PatientConsultation = () => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) =>
           statusList == item.situacao && (
-            <AppointmentCard  name={"Dr.Ran Chucrutes"} appointmentHour={"15:00"} age={"33 anos"} img={DrImage} situacao={item.situacao} onPressCancel={() => setModalVisible(true) }
+            <AppointmentCard  name={"Dr.Ran Chucrutes"} appointmentHour={"15:00"} age={"33 anos"} img={DrImage} situacao={item.situacao} 
+             onPressCancel={() => setModalVisible(true) }
              onPressAppointment={() => setModalVision(true)}
+             onPressCard={() => setShowModalDoctor(true) }
             
             />
             
@@ -90,7 +93,9 @@ export const PatientConsultation = () => {
 
       <AppointmentModal visible={showModalAppointment} setShowModal={setModalVision}/>
 
-      <SchedulePatientModal visible={showModalSchedule} setShowModal={setShowModalSchedule}></SchedulePatientModal>  
+      <SchedulePatientModal visible={showModalSchedule} setShowModal={setShowModalSchedule} navigation={navigation}/>  
+
+      <DoctorModal  visible={showModalDoctor} setShowModal={setShowModalDoctor}/>
 
 
       {/* <BottomMenu/> */}

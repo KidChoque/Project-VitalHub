@@ -6,14 +6,15 @@ import { Title } from "../../components/Title/Title";
 
 import LogoImage from '../../../assets/Logo.png'
 import { Subtitle, SubtitleBox } from "../../components/Subtitle/Subtitle";
+import { CancelLink } from "../../components/Link/Link";
 
 
-export const CreateAccount = () => {
+export const CreateAccount = ({navigation}) => {
 
     return(
 
         <Container>
-        
+                
           <Logo source={LogoImage}/>
 
           <Title>Criar Conta</Title>
@@ -30,9 +31,11 @@ export const CreateAccount = () => {
 
           <Input placeholder="Confirmar Senha"/>
 
-          <Continue >
+          <Continue onPress={() => navigation.navigate("Login")}>
             <ButtonTitle>Cadastrar</ButtonTitle>
           </Continue>
+
+          <CancelLink  onPress={() => navigation.navigate("Login")}>Cancelar</CancelLink>
         
         
         

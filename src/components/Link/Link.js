@@ -6,10 +6,16 @@ export const LinkMedium = styled.Text`
  color: #8C8A97;
  margin: 5%;
  align-self: flex-start;
+ text-decoration: underline;
  /* border-bottom: #7A7786; */
+ background-color: transparent;
 
 `
 
 export const LinkAccount = styled(LinkMedium)`
 color: #4D659D;
+`
+
+export const CancelLink = styled(LinkAccount)`
+ align-self: center;
 `

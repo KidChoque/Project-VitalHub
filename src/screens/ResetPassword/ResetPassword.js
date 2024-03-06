@@ -8,7 +8,7 @@ import LogoImage from '../../../assets/Logo.png'
 import { Subtitle, SubtitleBox } from "../../components/Subtitle/Subtitle";
 
 
-export const ResetPassaword = () => {
+export const ResetPassword = ({navigation}) => {
 
     return(
 
@@ -28,7 +28,7 @@ export const ResetPassaword = () => {
         
           <Input placeholder="Confirmar nova senha"/>
 
-          <Continue >
+          <Continue onPress={() => navigation.navigate("Login")} >
             <ButtonTitle>Confirmar Nova Senha</ButtonTitle>
           </Continue>
         

@@ -25,6 +25,7 @@ export const AppointmentCard = ({
   situacao = "pendente",
   onPressCancel,
   onPressAppointment,
+  onPressCard,
   img,
   age,
   name,
@@ -32,7 +33,7 @@ export const AppointmentCard = ({
   appointmentHour,
 }) => {
   return (
-    <ContainerCardList>
+    <ContainerCardList onPress={onPressCard}>
       <ProfileImage source={img} />
 
       <ContentCard>

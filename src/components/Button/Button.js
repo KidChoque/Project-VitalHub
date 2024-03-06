@@ -40,6 +40,25 @@ height: 60px;
 
 `
 
+export const ArrowXIconView = styled.View`
+
+position: fixed;
+
+margin-top: 5%;
+right: 42%;
+
+background-color: #49B3BA;
+
+
+justify-content: center;
+align-items: center;
+
+border-radius: 10px;
+width:30px;
+height:30px;
+
+`
+
 
 export const Continue = styled(Button)`
   margin: 5%;

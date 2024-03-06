@@ -21,6 +21,7 @@ import {
 } from "./Modal";
 
 import PatientImage from "../../../assets/User.png";
+import DoctorImage from "../../../assets/Doctor.png";
 import InfoBox from "../InfoBox/InfoIndex";
 import { View } from "react-native";
 import { ButtonTextAppointmentStyle } from "../AbsListAppointment/AbsListAppointment";
@@ -84,7 +85,31 @@ export const AppointmentModal = ({ visible, setShowModal, ...rest }) => {
   );
 };
 
-export const SchedulePatientModal = ({ visible, setShowModal, ...rest }) => {
+const arr1 = ["Cliníco geral", "CRM-15286"];
+
+export const DoctorModal = ({ visible, setShowModal, ...rest }) => {
+  return (
+    <Modal {...rest} visible={visible} transparent={true} animationType="slide">
+      <PatientModal>
+        <ModalContent>
+          <ModalImage source={DoctorImage} />
+
+          <InfoBox username={"Ran Chucrutes"} infoArr={arr}></InfoBox>
+
+          <ModalButton>
+            <ButtonTitle>Ver Local da Consulta</ButtonTitle>
+          </ModalButton>
+
+          <ModalCancelButton onPress={() => setShowModal(false)}>
+            <ModalButtonTitle>Cancelar</ModalButtonTitle>
+          </ModalCancelButton>
+        </ModalContent>
+      </PatientModal>
+    </Modal>
+  );
+};
+
+export const SchedulePatientModal = ({ navigation,visible, setShowModal, ...rest }) => {
   return (
     <ScheduleModal
       {...rest}
@@ -92,6 +117,9 @@ export const SchedulePatientModal = ({ visible, setShowModal, ...rest }) => {
       transparent={true}
       animationType="slide"
     >
+
+      {/* Função com navigation replace para o Select CLinic */}
+
       <PatientModal2>
         <ModalContent2>
           <Title>Agendar Consulta</Title>
@@ -109,7 +137,9 @@ export const SchedulePatientModal = ({ visible, setShowModal, ...rest }) => {
           <Input placeholder={"Informe a localização"}></Input>
 
 
-          <ScheduleBtn>
+          <ScheduleBtn
+          // COLOCAR A FUNÇÃO AQUI
+          >
             <ButtonTitle>Continuar</ButtonTitle>
           </ScheduleBtn>
           
