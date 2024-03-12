@@ -41,7 +41,7 @@ export const Login = ({ navigation }) => {
       <ContentAccount>
         <TextAccount>
           Não tem Conta ?
-          <LinkAccount onPress={() => navigation.navigate("CreateAccount")}>
+          <LinkAccount onPress={() => navigation.navigate("ConsultationLocation")}>
             Crie uma conta agora!
           </LinkAccount>{" "}
         </TextAccount>
