@@ -9,3 +9,6 @@ export const InputLabel = styled.Text`
     font-family: "Quicksand_500Medium";
     color: #000000;
 `
+export const InputLabel2 = styled(InputLabel)`
+text-align: right;
+`

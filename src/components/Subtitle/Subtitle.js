@@ -9,9 +9,9 @@ margin: 2.5%;
 export const Subtitle = styled.Text`
 text-align: center;
 font-size: 16px;
+flex-direction: row;
 font-family: "Quicksand_500Medium";
 color: #5F5C6B;
-flex-direction: row;
 
 `
 

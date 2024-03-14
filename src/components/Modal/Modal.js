@@ -6,7 +6,16 @@ height: 310px;
 border-radius: 10px;
 background-color: "#FFFFFF";
 align-items: center;
+
 `
+export const ModalMap = styled(Modal)`
+width: 100%;
+height: 200px;
+background-color: transparent;
+stroke: 5px #0000 ;
+`
+
+
 export const ScheduleModal = styled(Modal)`
 width: 100%;
 height: 518px;

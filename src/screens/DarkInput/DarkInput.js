@@ -13,12 +13,14 @@ background-color: #EDEDED;
 
 `
 
-export const Cep = styled(DarkInput)`
-width: 105%;
+export const TinyInput = styled(DarkInput)`
+position: fixed;
+right: 22%;
+width: 35%;
 
 
 `
-export const Cidade = styled(DarkInput)`
-width: 106%;
+export const TinyInput2 = styled(TinyInput)`
+left: 22%;
 
 `

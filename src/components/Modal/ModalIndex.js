@@ -87,7 +87,7 @@ export const AppointmentModal = ({ visible, setShowModal, ...rest }) => {
 
 const arr1 = ["Cliníco geral", "CRM-15286"];
 
-export const DoctorModal = ({ visible, setShowModal, ...rest }) => {
+export const DoctorModal = ({ navigation , visible, setShowModal, ...rest }) => {
   return (
     <Modal {...rest} visible={visible} transparent={true} animationType="slide">
       <PatientModal>
@@ -96,7 +96,7 @@ export const DoctorModal = ({ visible, setShowModal, ...rest }) => {
 
           <InfoBox username={"Ran Chucrutes"} infoArr={arr}></InfoBox>
 
-          <ModalButton>
+          <ModalButton onPress={() => navigation.navigate("ConsultationLocation")}>
             <ButtonTitle>Ver Local da Consulta</ButtonTitle>
           </ModalButton>
 
