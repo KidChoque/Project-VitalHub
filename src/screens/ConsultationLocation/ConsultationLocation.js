@@ -19,7 +19,7 @@ import {
   watchPositionAsync,
 } from "expo-location";
 
-export const ConsultationLocation = () => {
+export const ConsultationLocation = (navigation) => {
   const arr1 = ["São Paulo", "SP"];
 
   const mapReference = useRef(null);

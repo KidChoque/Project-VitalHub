@@ -16,6 +16,8 @@ import { IconButton, ScheduleButtonView } from "../../components/Button/Button";
 import { FontAwesome6 } from '@expo/vector-icons';
 
 
+
+
 const Consultas = [
   { id: 1, nome: "Lucas", situacao: "pendente" },
   { id: 2, nome: "Lucas", situacao: "realizado" },

@@ -33,6 +33,7 @@ import {
 } from "../AbsListAppointment/AbsListAppointmentIndex";
 import { FilterAppointment } from "../FilterAppointment/FilterAppointment";
 import { Input } from "../Input/Input";
+import { handleCallNotifications } from "../Nofication/NotificationIndex";
 
 export const CancelationModal = ({ visible, setShowModal, ...rest }) => {
   return (
@@ -48,7 +49,7 @@ export const CancelationModal = ({ visible, setShowModal, ...rest }) => {
             </Subtitle>
           </SubtitleBox>
 
-          <ModalButton>
+          <ModalButton onPress={handleCallNotifications}>
             <ButtonTitle>Confirmar</ButtonTitle>
           </ModalButton>
 
